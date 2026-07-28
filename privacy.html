@@ -5,12 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MusoHQ Privacy Policy</title>
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 640px; margin: 0 auto; padding: 32px 20px 64px; line-height: 1.55; color: #1c1c1e; }
+  /* The page sets a text colour, so it must set a background too. Without one
+     the browser supplies a black canvas in dark mode and #1c1c1e text became
+     unreadable on it. Both schemes are declared explicitly instead. */
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 640px; margin: 0 auto; padding: 32px 20px 64px; line-height: 1.55; color: #1c1c1e; background: #ffffff; }
   h1 { font-size: 1.6em; margin-bottom: 0.2em; }
   h2 { font-size: 1.15em; margin-top: 1.6em; }
   a { color: #0066cc; }
-  .updated { color: #666; margin-top: 0; }
-  footer { margin-top: 3em; font-size: 0.85em; color: #888; }
+  .updated, .tagline { color: #5c5c60; margin-top: 0; }
+  footer { margin-top: 3em; font-size: 0.85em; color: #5c5c60; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #f2f2f7; background: #000000; }
+    a { color: #6cb4ff; }
+    .updated, .tagline, footer { color: #a1a1a6; }
+  }
 </style>
 </head>
 <body>
@@ -18,8 +27,7 @@
 <h1>MusoHQ Privacy Policy</h1>
 <p class="updated">Last updated: 28 July 2026</p>
 
-<!-- ABN PLACEHOLDER: replace the bracketed text below with the real 11-digit ABN before publishing. -->
-<p>MusoHQ is made by Matthew Edwards, ABN [INSERT ABN], a sole trader in New South Wales, Australia. MusoHQ is built to collect as little as possible. There is no account, no server, and no analytics. Here is exactly what that means.</p>
+<p>MusoHQ is made by Matthew Edwards, ABN 44 523 291 099, a sole trader in New South Wales, Australia. MusoHQ is built to collect as little as possible. There is no account, no server, and no analytics. Here is exactly what that means.</p>
 
 <h2>What MusoHQ does not do</h2>
 <ul>
